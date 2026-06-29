@@ -1,0 +1,76 @@
+.page-header {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(86px, 9vw, 126px) 0 clamp(76px, 8vw, 118px);
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.26), transparent 34%),
+    linear-gradient(135deg, #0f172a, #1e3a8a);
+}
+
+.page-header::before,
+.page-header::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.page-header::before {
+  top: -160px;
+  right: -160px;
+  width: 420px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.page-header::after {
+  left: -100px;
+  bottom: -120px;
+  width: 260px;
+  height: 260px;
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+}
+
+.page-header-content span {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.page-header-content h1 {
+  color: var(--white);
+  font-size: var(--h1);
+  line-height: 1.06;
+  margin-bottom: 22px;
+}
+
+.page-header-content p {
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: var(--lead);
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    text-align: center;
+  }
+
+  .page-header-content {
+    margin: 0 auto;
+  }
+
+  .page-header-content p {
+    margin: 0 auto;
+  }
+}

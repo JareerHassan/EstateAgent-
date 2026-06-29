@@ -1,0 +1,39 @@
+:root {
+  --primary: #1e3a8a;
+  --primary-light: #3b82f6;
+  --primary-soft: #dbeafe;
+
+  --heading: #0f172a;
+  --text: #64748b;
+  --text-strong: #334155;
+
+  --white: #ffffff;
+  --body-bg: #ffffff;
+  --section: #f8fafc;
+  --section-soft: #f1f5f9;
+  --border: #e2e8f0;
+
+  --shadow-sm: 0 4px 20px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 40px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 24px 70px rgba(15, 23, 42, 0.1);
+
+  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-md: 22px;
+  --radius-lg: 28px;
+  --radius-xl: 34px;
+
+  --container: 1200px;
+  --container-wide: 1320px;
+
+  --section-space: clamp(54px, 7vw, 44px);
+  --section-space-sm: clamp(48px, 5.5vw, 78px);
+  --section-gap: clamp(34px, 4.5vw, 60px);
+
+  --h1: clamp(2.35rem, 5vw, 4.4rem);
+  --h2: clamp(2rem, 3.7vw, 3.35rem);
+  --h3: clamp(1.35rem, 2.2vw, 2rem);
+  --lead: clamp(1rem, 1.6vw, 1.125rem);
+
+  --transition: 220ms ease;
+}

@@ -1,0 +1,121 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+
+.navbar-wrapper {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-left a,
+.nav-right a {
+  color: var(--heading);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+}
+
+.nav-left a:hover,
+.nav-right a:hover,
+.nav-left .active,
+.nav-right .active {
+  background: var(--section-soft);
+  color: var(--primary);
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu-btn {
+  display: none;
+  min-height: 42px;
+  padding: 0 16px;
+  background: var(--section);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--heading);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    margin-bottom: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+  }
+
+  .mobile-menu a {
+    color: var(--heading);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .mobile-menu a:hover,
+  .mobile-menu .active {
+    background: var(--section);
+    color: var(--primary);
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-wrapper {
+    min-height: 74px;
+  }
+}

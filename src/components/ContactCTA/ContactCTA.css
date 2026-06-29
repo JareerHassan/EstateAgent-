@@ -1,0 +1,135 @@
+.contact-cta {
+  background: var(--white);
+}
+
+.contact-cta-box {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--section-gap);
+  align-items: center;
+  padding: clamp(42px, 6vw, 68px);
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.18);
+}
+
+.contact-cta-box::before,
+.contact-cta-box::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-cta-box::before {
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-cta-box::after {
+  bottom: -90px;
+  left: -90px;
+  width: 240px;
+  height: 240px;
+  background: rgba(59, 130, 246, 0.22);
+}
+
+.cta-content,
+.cta-actions {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.cta-content h2 {
+  max-width: 760px;
+  margin-bottom: 20px;
+  color: var(--white);
+  font-size: var(--h2);
+  line-height: 1.08;
+}
+
+.cta-content p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: var(--lead);
+  line-height: 1.75;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 0 26px;
+}
+
+.cta-primary {
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--white);
+}
+
+.cta-secondary {
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.cta-primary:hover,
+.cta-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 991px) {
+  .contact-cta-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta-content h2,
+  .cta-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-cta-box {
+    border-radius: var(--radius-md);
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+  }
+}
